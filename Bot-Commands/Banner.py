@@ -16,7 +16,7 @@ client = commands.Bot(
 )
 
 @client.command()
-async def fetch_user(ctx, user: discord.User = None):
+async def banner(ctx, user: discord.User = None):
     r = requests.get(f'https://discord.com/api/users/{user.id}', headers = headers).json()
     print(r)
     bannerurl = str(r['banner'])

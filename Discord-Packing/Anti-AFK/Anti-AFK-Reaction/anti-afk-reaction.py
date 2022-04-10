@@ -11,7 +11,6 @@ logging.basicConfig(
 log = logging.info
 os.system('cls')
 token = input('Token: ')
-emojis = open('emojis.txt')
 client = discord.Client()
 
 @client.event
@@ -22,7 +21,7 @@ async def on_ready():
 async def on_message(message):
     if client.user.mentioned_in(message):
         for emoji in emojis:
-            await message.add_reaction(emoji)
-            log('Sent -> {}'.format(emoji))
+            await message.add_reaction('😎')
+            log('Reacted to ping!')
 
 client.run(token, bot = False)

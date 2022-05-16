@@ -33,6 +33,7 @@ async def on_ready():
 async def cyclestatus(ctx, delay: int):
     global status_cycle
     status_cycle = True
+    await ctx.message.delete()
     print('Status Cycle: {}\n Delay: {}'.format(status_cycle, delay))
     while status_cycle:
         time.sleep(int(delay))

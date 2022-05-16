@@ -1,3 +1,12 @@
+###################################################
+#                                                 #
+#                                                 #
+# could get u disabled lol if delay time is super #
+# low. Recommmended Time: 10-15 seconds           #
+#                                                 #
+#                                                 #
+###################################################
+
 import os
 import time
 import random
